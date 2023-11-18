@@ -1,0 +1,64 @@
+// import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Intro from "components/intro";
+import ListItem from 'components/list-item';
+import GridItem from "components/grid-item";
+import MyNavbar from "components/my-navbar";
+import { getAllPosts } from '../lib/api';
+import Layout from "components/layout";
+
+export default function Home({posts}) {
+
+  return (
+  // <div className='header '>
+  //     <MyNavbar />
+  //     <div className="blog-detail-page">
+  //       <Row className='row1'> 
+  //           <Col md="100%" >
+  //               <Intro/>
+  //           </Col>
+  //       </Row>
+        
+  //       <hr />
+ 
+
+  //       <div className={`page-wrapper`}>
+  <Layout>
+           <pre>{JSON.stringify(posts, null, 2)}</pre>
+          <Row className="mb-5">
+            <Col md="100%">
+              <ListItem />
+            </Col>
+            {
+              posts.map(post =>  <Col md="4">
+              <GridItem post = {post}/>
+            </Col>)
+            }
+
+          </Row>
+    </Layout>
+      //   </div>
+      // </div>
+      // <footer className="page-footer">
+      //   <div>
+      //     <a href='#'>Бидний тухай</a>
+      //     <a href='#' >Нууцлалын бодлого</a>
+      //     <a href='#' >Сурталчилгаа байршуулах</a>
+      //     <a href='#'>Холбоо барих</a>
+         
+      //   </div>
+        
+      // </footer>
+      // </div>
+  )
+}
+
+export async function getStaticProps() {
+  const posts = await getAllPosts();
+  return {
+      props: {
+           posts,
+      }
+ };
+}
