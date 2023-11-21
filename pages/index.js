@@ -27,7 +27,7 @@ export default function Home({posts, categories, stories}) {
               </Col>
           </Row>
           <hr />
-            <pre>{JSON.stringify(stories, null, 2)}</pre>
+            {/* <pre>{JSON.stringify(stories, null, 2)}</pre> */}
             {/* <pre>{JSON.stringify(categories, null, 2)}</pre> */}
             {/* <pre>{JSON.stringify(posts, null, 2)}</pre> */}
             {/* <pre>{JSON.stringify(data, null, 2)}</pre>
