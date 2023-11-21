@@ -10,11 +10,12 @@ import { getAllCategories } from '../lib/api';
 import Layout from "components/layout";
 import { usePosts } from '/hooks/usePosts';
 import useSWRInfinite from 'swr/infinite'
+import { getAllStories } from 'lib/api';
 
 // import MyNavbar from "components/my-navbar";
 const PAGE_LIMIT = 6;
 
-export default function Home({posts, categories}) {
+export default function Home({posts, categories, stories}) {
   const { data, size, setSize } = useSWRInfinite((index) => `/api/posts?page=${index}&limit=${PAGE_LIMIT}`,{ initialData: [posts] }
   );
   return (
@@ -26,9 +27,11 @@ export default function Home({posts, categories}) {
               </Col>
           </Row>
           <hr />
+            <pre>{JSON.stringify(stories, null, 2)}</pre>
             {/* <pre>{JSON.stringify(categories, null, 2)}</pre> */}
             {/* <pre>{JSON.stringify(posts, null, 2)}</pre> */}
             {/* <pre>{JSON.stringify(data, null, 2)}</pre>
+            
             <div>-----------------------------------------------------</div>
             <pre>{JSON.stringify(posts, null, 2)}</pre> */}
               <Row className="mb-5">
@@ -57,9 +60,10 @@ export default function Home({posts, categories}) {
 export async function getStaticProps() {
   const posts = await getPaginatedPosts(1, PAGE_LIMIT);
   const categories = await getAllCategories();
+  const stories = await getAllStories();
   return {
       props: {
-           posts, categories
+           posts, categories, stories
       }
  };
 }

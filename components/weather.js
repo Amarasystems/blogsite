@@ -98,7 +98,7 @@ const weekView = () => {
 }
 
 ///////////weather render///
-   weatherView();
+weatherView();
 
     return (
         <div className="weather-container">

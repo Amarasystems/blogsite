@@ -12,6 +12,7 @@ export default () => (
     </div>
   </div>
   
+  
   <div className="float-child">
     <div className="blue"> 
     <Card.Img 
