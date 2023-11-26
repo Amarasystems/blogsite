@@ -8,7 +8,6 @@ import GridItem from "components/grid-item";
 import { getPaginatedPosts } from '../lib/api';
 import { getAllCategories } from '../lib/api';
 import Layout from "components/layout";
-import { usePosts } from '/hooks/usePosts';
 import useSWRInfinite from 'swr/infinite'
 import { getAllStories } from 'lib/api';
 
@@ -22,11 +21,12 @@ export default function Home({posts, categories, stories}) {
     <Layout>
 
                 <Row className='row2'> 
-              <Col md="100%" >
+              <Col md="5px" >
                   <Intro/>
               </Col>
           </Row>
           <hr />
+          
             {/* <pre>{JSON.stringify(stories, null, 2)}</pre> */}
             {/* <pre>{JSON.stringify(categories, null, 2)}</pre> */}
             {/* <pre>{JSON.stringify(posts, null, 2)}</pre> */}
@@ -40,7 +40,7 @@ export default function Home({posts, categories, stories}) {
                 </Col>
                 {data && data.map((page) => 
                   page.map((post) => (
-                    <Col md={24/PAGE_LIMIT}>
+                    <Col md={18/PAGE_LIMIT} >
                       <GridItem post = {post}/>
                     </Col>
                   )
@@ -53,6 +53,7 @@ export default function Home({posts, categories, stories}) {
                 Цааш үзэх
               </Button>}
             </div>
+          
       </Layout>
   )
 }

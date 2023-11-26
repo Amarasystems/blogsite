@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import { Card } from "react-bootstrap";
 
 export default () => (
+
   <div className="float-container">
   <div className="float-child">
     <div className="ontsloh-medee"><h2>ОНЦЛОХ МЭДЭЭ<h2>ene bol garchig yum </h2></h2> 
@@ -11,6 +12,7 @@ export default () => (
     хөрөнгө мөнгө зарцуулахгүй байгаа юм.
     </div>
   </div>
+
   
   
   <div className="float-child">

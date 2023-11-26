@@ -7,7 +7,6 @@ import { getPaginatedPosts } from "lib/api";
 import { urlFor } from "/lib/api";
 import PostHeader from "components/post-header";
 import {useRouter} from 'next/router';
-
 const BlockContent = require('@sanity/block-content-to-react')
 
 
@@ -26,7 +25,7 @@ return (
         {/* <pre>{JSON.stringify(post, null, 2)}</pre> */}
         <PostHeader post={post}/>
         <br />
-        <BlockContent 
+        <BlockContent
             blocks={post.content} 
             serializers={serializers} 
             imageOptions={{w: 320, h: 240, fit: 'max'}}

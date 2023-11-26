@@ -23,7 +23,7 @@ export default function Home({posts, categories}) {
           {/* <pre>{JSON.stringify(categories, null, 2)}</pre> */}
 <Row className="mb-5">
   <Col md="100%">
-    <ListItem />
+    <ListItem/>
   </Col>
   
   {

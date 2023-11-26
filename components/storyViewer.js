@@ -2,12 +2,15 @@
 
 import { Media, Image } from "react-bootstrap";
 import React, {useState} from "react";
+import { getAllStories } from "@/lib/api";
+import { getAllCategories } from "@/lib/api";
 
 export default () => {
    const storyRender = async () => {
     var url = "https://monxansh.appspot.com/xansh.json?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW"
     var response = await fetch(url);
     var data = await response.json();
+    
     const allStories = [
       {
         id: 0,
