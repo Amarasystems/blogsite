@@ -42,7 +42,7 @@ export default ({post}) => {
           <Card.Title className="card-main-title">
             {post.title}
           </Card.Title>
-          <Card.Text>{post.category.category_name}</Card.Text>
+          <Card.Text >{post.category.category_name}</Card.Text>
         </Card.Body>
       </Link>
       </div>
