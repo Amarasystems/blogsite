@@ -13,7 +13,7 @@ import { getAllStories } from 'lib/api';
 
 // import MyNavbar from "components/my-navbar";
 const PAGE_LIMIT = 6;
-
+<link rel="icon" href="/public/favicon.ico" sizes="60x16 60x32" />
 export default function Home({posts, categories, stories}) {
   const { data, size, setSize } = useSWRInfinite((index) => `/api/posts?page=${index}&limit=${PAGE_LIMIT}`,{ initialData: [posts] }
   );
