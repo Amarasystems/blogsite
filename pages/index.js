@@ -43,6 +43,7 @@ export default function Home({posts, categories, stories}) {
                     <Col md={18/PAGE_LIMIT} >
                       <GridItem post = {post}/>
                     </Col>
+
                   )
                   ))}
               </Row>
