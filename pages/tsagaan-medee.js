@@ -13,11 +13,11 @@ export default function Home({posts, categories}) {
   return (
     <Layout>
       Категори: Цагаан мэдээ
-    <Row className='row2'> 
+    {/* <Row className='row2'> 
   <Col md="100%" >
       <Intro/>
   </Col>
-</Row>
+</Row> */}
 <hr />
 {/* <pre>{JSON.stringify(posts, null, 2)}</pre> */}
           {/* <pre>{JSON.stringify(categories, null, 2)}</pre> */}
