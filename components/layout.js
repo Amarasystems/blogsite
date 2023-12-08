@@ -42,6 +42,8 @@ export default ({children}) => {
          Бүх эрх хуулиар хамгаалагдсан © 2023 он, Powered by <span className="amara">AmaraSystem</span>
         </div>
       </footer>
+    
+        
      
       </div>
     )
