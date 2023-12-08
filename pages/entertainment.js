@@ -15,7 +15,7 @@ export default function Home({posts, categories}) {
       Категори: Энтертайнмент
     <Row className='row2'> 
   <Col md="100%" >
-      <Intro/>
+      {/* <Intro/> */}
   </Col>
 </Row>
 <hr />

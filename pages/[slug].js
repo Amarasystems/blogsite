@@ -72,7 +72,7 @@ export const getStaticProps = async ({ params }) => {
       },
     };
   };
-  
+
   export const getStaticPaths = async () => {
     const posts = await getPaginatedPosts(0, 15);
     return {
